@@ -1,0 +1,4 @@
+netsquid
+netsquid-physlayer
+scipy==1.8
+numpy==1.22
