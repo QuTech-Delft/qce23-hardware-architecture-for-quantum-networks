@@ -1,3 +1,5 @@
+import argparse
+
 from netsquid.qubits import qubitapi, operators
 import netsquid as ns
 
@@ -151,6 +153,15 @@ def swapping():
 
 if __name__ == "__main__":
     # Comment or to execute the desired exercise.
-    detectors()
-    heralding()
-    swapping()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('exercise', type=int, choices=[1, 2, 3])
+
+    args = parser.parse_args()
+    exercise = args.exercise
+
+    if exercise == 1:
+        detectors()
+    elif exercise == 2:
+        heralding()
+    else:
+        swapping()
